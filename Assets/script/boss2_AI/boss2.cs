@@ -10,6 +10,9 @@ public class boss2 : MonoBehaviour
     public float atkCooltime = 1; //공격속도
     public float atkDelay;
 
+    public float skillatkCooltime = 10; //공격속도
+    public float skillatkDelay;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -20,5 +23,8 @@ public class boss2 : MonoBehaviour
     {
         if (atkDelay >= 0)
             atkDelay -= Time.deltaTime;
+
+        if (skillatkDelay >= 0)
+            skillatkDelay -= Time.deltaTime;
     }
 }

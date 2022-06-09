@@ -15,7 +15,7 @@ public class idleState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(boss2Transform.position, boss2.player.position) <= 50) // 플레이어와 보스2의 거리가 4이하일경우 실행
+        if (Vector2.Distance(boss2Transform.position, boss2.player.position) <= 50f) // 플레이어와 보스2의 거리가 50이하일경우 실행
             animator.SetBool("Iswalk", true);
     }
 
