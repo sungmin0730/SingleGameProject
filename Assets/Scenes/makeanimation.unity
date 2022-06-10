@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 898147395}
   - component: {fileID: 898147396}
   - component: {fileID: 898147397}
+  - component: {fileID: 898147398}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -668,9 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0b8cdb6a2400d40bae3214d54a51cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1143859279}
-  speed: 1
-  targetposition: {x: 0, y: 0, z: 0}
+  camera: {fileID: 0}
 --- !u!95 &898147397
 Animator:
   serializedVersion: 3
@@ -690,6 +689,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &898147398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898147391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dfcd3ed28165e48a3d47bcfed31f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1143859274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1566,11 +1577,6 @@ MonoBehaviour:
   atkDelay: 0
   skillatkCooltime: 10
   skillatkDelay: 0
---- !u!4 &1143859279 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6929231488729362510, guid: 741c17a63cb7a1e41adada103b47c05c, type: 3}
-  m_PrefabInstance: {fileID: 1143859274}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157967603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoom: {fileID: 898147396}
   moveSpeed: 0.5
-  camera: {fileID: 0}
 --- !u!1 &1241776836
 GameObject:
   m_ObjectHideFlags: 0
