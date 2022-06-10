@@ -609,8 +609,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -670,6 +670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1143859279}
   speed: 1
+  targetposition: {x: 0, y: 0, z: 0}
 --- !u!95 &898147397
 Animator:
   serializedVersion: 3
@@ -1819,6 +1820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoom: {fileID: 898147396}
   moveSpeed: 0.5
+  camera: {fileID: 0}
 --- !u!1 &1241776836
 GameObject:
   m_ObjectHideFlags: 0

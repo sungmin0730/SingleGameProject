@@ -17,6 +17,7 @@ public class Boss2HP : MonoBehaviour
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+   
     public void TakeDamage(float damage)
     {
         //현재 체력을 damage 만큼 감소

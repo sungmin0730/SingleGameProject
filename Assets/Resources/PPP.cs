@@ -24,30 +24,7 @@ public class PPP : MonoBehaviour
     }
     private void Update()
     {
-        Zoomin();
+
     }
-    public void Zoomin()
-    {
-        if (follow == true)
-        {
-            zoom.targetposition = new Vector3(zoom.target.transform.position.x, zoom.target.transform.position.y, 0f);
-            transform.position = Vector3.MoveTowards(transform.position, zoom.targetposition, zoom.speed * Time.deltaTime);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.transform.gameObject.tag == "abc")
-        {
-            follow = true;
-            Debug.Log("테스트");
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.transform.gameObject.tag == "abc")
-        {
-            follow = false;
-            Debug.Log("테스트");
-        }
-    }
+    
 }
