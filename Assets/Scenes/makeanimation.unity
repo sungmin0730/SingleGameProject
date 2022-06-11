@@ -561,6 +561,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2969048845192713781, guid: faaf4879487192b4a9fdb872fab7539c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.673
+      objectReference: {fileID: 0}
     - target: {fileID: 3858662091510369356, guid: faaf4879487192b4a9fdb872fab7539c, type: 3}
       propertyPath: m_Name
       value: "\uBCF4\uC2A41"
@@ -657,9 +661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1216330361}
   speed: 1
-  atkCooltime: 1
+  atkCooltime: 2
   atkDelay: 0
-  skillatkCooltime: 5
+  skillatkCooltime: 10
   skillatkDelay: 0
 --- !u!4 &786430828 stripped
 Transform:
@@ -680,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicgu: {fileID: 7211692583330649843, guid: f0e907824adec9749baf6d620648e14c, type: 3}
   boss1: {fileID: 786430828}
+  playerTransform: {fileID: 1216330361}
 --- !u!1 &898147391
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7631368113077762984, guid: 741c17a63cb7a1e41adada103b47c05c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7631368113077762984, guid: 741c17a63cb7a1e41adada103b47c05c, type: 3}
       propertyPath: m_TagString
@@ -1840,7 +1845,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1950,7 +1955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoom: {fileID: 898147396}
-  moveSpeed: 0.5
+  moveSpeed: 1
 --- !u!1 &1241776836
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,19 @@ public class moveState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (Vector2.Distance(boss1.player.position, boss1Transform.position) > 4f)
+            boss1Transform.position = Vector3.MoveTowards(boss1Transform.position, new Vector3(boss1.player.position.x, boss1Transform.position.y, boss1Transform.position.z), Time.deltaTime * boss1.speed);
+        else
+        {
+            animator.SetBool("Iswalk", false);
+            if (boss1.atkDelay <= 0)
+                animator.SetTrigger("Attack");
+
+        }
+        if (Vector2.Distance(boss1.player.position, boss1Transform.position) <= 50f && boss1.skillatkDelay <= 0)
+        {
+            animator.SetTrigger("SkillAttack");
+        }
         if (boss1.player.position.x - boss1Transform.position.x > 0)
         {
             boss1Transform.localScale = new Vector3(-1, 1, 1);
@@ -24,18 +37,7 @@ public class moveState : StateMachineBehaviour
         {
             boss1Transform.localScale = new Vector3(1, 1, 1);
         }
-        if (Vector2.Distance(boss1.player.position, boss1Transform.position) > 3f)
-            boss1Transform.position = Vector3.MoveTowards(boss1Transform.position, new Vector3(boss1.player.position.x, boss1Transform.position.y, boss1Transform.position.z), Time.deltaTime * boss1.speed);
-        else
-        {
-            animator.SetBool("Iswalk", false);
-            if (boss1.atkDelay <= 0)
-                animator.SetTrigger("Attack");
-        }
-        if (Vector2.Distance(boss1.player.position, boss1Transform.position) <= 50f && boss1.skillatkDelay <= 0)
-        {
-            animator.SetTrigger("SkillAttack");
-        }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

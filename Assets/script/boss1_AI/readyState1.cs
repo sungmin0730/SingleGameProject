@@ -17,6 +17,7 @@ public class readyState1 : StateMachineBehaviour
     {
 
 
+
         if (Vector2.Distance(boss1.player.position, boss1Transform.position) > 4f)
             animator.SetBool("Iswalk", true);
     }
