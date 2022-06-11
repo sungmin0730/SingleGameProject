@@ -6,7 +6,6 @@ public class PPP : MonoBehaviour
 {
     public Zoom zoom;
     public float moveSpeed = 1f;
-    bool follow = false;
     // Start is called before the first frame update
     Rigidbody2D rigid;
 

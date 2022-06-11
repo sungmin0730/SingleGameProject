@@ -31,7 +31,7 @@ public class walkState : StateMachineBehaviour
         }
         if (Vector2.Distance(boss2.player.position, boss2Transform.position) <= 50f && boss2.skillatkDelay <= 0)
             animator.SetTrigger("SkillAttack");
-
+ 
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

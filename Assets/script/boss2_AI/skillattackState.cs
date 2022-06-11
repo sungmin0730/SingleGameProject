@@ -6,10 +6,14 @@ public class skillattackState : StateMachineBehaviour
 {
     Transform boss2Transform;
     boss2 boss2;
+    Boss1 boss1;
+    Transform boss1Transform;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         boss2 = animator.GetComponent<boss2>();
         boss2Transform = animator.GetComponent<Transform>();
+        boss1 = animator.GetComponent<Boss1>();
+        boss1Transform = animator.GetComponent<Transform>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
