@@ -13,6 +13,7 @@ public class MoveCamera : MonoBehaviour
     float width;
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         height = Camera.main.orthographicSize;
         width = height * Screen.width / Screen.height;
     }

@@ -26,16 +26,20 @@ public class Monster : MonoBehaviour //, 데미지구조체
     float distance;
 
     public GameObject hpBar;
-    public GameObject canvas;
+    public GameObject hpBarCanvas;
     RectTransform hpBarTransform;
 
     protected virtual void Start()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        lastAttackTime = attackSpeed; // 처음 감지 후 바로 공격하기 위해
+        
+        hpBarCanvas = GameObject.Find("MonsterHPBarCanvas");
+        hpBarTransform = Instantiate(hpBar, hpBarCanvas.transform).GetComponent<RectTransform>();
 
-        hpBarTransform = Instantiate(hpBar, canvas.transform).GetComponent<RectTransform>();
+        lastAttackTime = attackSpeed; // 처음 감지 후 바로 공격하기 위해
 
         StartCoroutine("ChangeMovement");
     }
@@ -70,8 +74,11 @@ public class Monster : MonoBehaviour //, 데미지구조체
                 moveVec = Vector3.zero;
             }
         }
-       
-        transform.position += moveVec * moveSpeed * Time.deltaTime;
+
+        if (distance >= 2f)
+        {
+            transform.position += moveVec * moveSpeed * Time.deltaTime;
+        }
     
     }
 

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 398618797644194499, guid: 099ed09cbb4d0d94dae0bf11bb79b47e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -193,5 +193,5 @@ MonoBehaviour:
   anim: {fileID: 0}
   dir: {x: 0, y: 0}
   hpBar: {fileID: 5286167527899708815, guid: 06af75dd759b6364286b4a3baf3a22d5, type: 3}
-  canvas: {fileID: 0}
+  hpBarCanvas: {fileID: 0}
   attackCollider: {fileID: 0}
