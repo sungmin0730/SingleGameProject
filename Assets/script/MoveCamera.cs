@@ -30,8 +30,8 @@ public class MoveCamera : MonoBehaviour
         float lx = size.x * 0.5f - width;                            // 카메라가 영역밖으로 못나가게 하는 코드
         float clampX = Mathf.Clamp(transform.position.x, -lx + center.x, lx + center.x); //Mathf.Clamp(value, min, max)
 
-        float ly = size.y * 0.5f - width;
-        float clampY = Mathf.Clamp(transform.position.y, -lx + center.y, lx + center.y);
+        float ly = size.y * 0.5f - height;
+        float clampY = Mathf.Clamp(transform.position.y, -ly + center.y, ly + center.y);
 
         transform.position = new Vector3(clampX, clampY, -10f); // -10f z값 고정
     }
